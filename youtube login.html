@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube signin</title>
+    <link rel="stylesheet"href="youtube login.css">
+    
+</head>
+<body>
+    <script>
+        function manage(txt) {
+        var bt = document.getElementById('loginBtn');
+        var ele = document.getElementsByTagName('input'); 
+        
+        // Loop through each element.
+        for (i = 0; i < ele.length; i++) {
+
+            // Check the element type.
+            if ((ele[i].type == 'text' || ele[i].type == 'password') && ele[i].value == '') {
+                bt.disabled = true;    // Disable the button.
+                return false;
+            }
+            else {
+                bt.disabled = false;   // Enable the button.
+            }
+        }
+    }
+    </script>
+<div class="section">
+    <div class="content">
+        <img src="google (1).png" width="60px" height="60px">
+
+
+     </div>
+     <div class="heading">
+        
+		  <p>Use Your Google Account</p> 
+          <br>  
+         
+     </div>
+     <div class="main">
+         <div class="form">
+            <input type="text" id="name" placeholder="Phone,email or username" 
+            onkeyup="manage(this)" /><br>
+   
+      <input type="password" id="desig" placeholder="password" 
+          onkeyup="manage(this)" /><br>  
+          <a href="youtube home page.html"><button id="loginBtn" disabled="disabled">Sign In</button></a>
+        </div>
+        
+     </div>
+<div class="paragraphs">
+    <div class="forgot">
+        <p><a href=" ">Forgot password ?</a></p>
+    </div>
+    <div class="signup">
+        <p><a href="https://www.google.com/">Create Account</a></p>
+    </div>
+
+     </div>
